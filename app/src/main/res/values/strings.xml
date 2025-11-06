@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">QuestNavigasTugas</string>
+    <string name="Nama">Hanifatul Nadiva</string>
+    <string name="NIM">20230140203</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="list">List Daftar Peserta</string>
+    <string name="nama_lengkap">NAMA LENGKAP</string>
+    <string name="jenis_kelamin">JENIS KELAMIN</string>
+    <string name="status">STATUS PERKAWINAN</string>
+    <string name="alamat">ALAMAT</string>
+    <string name="submit">Submit</string>
+    <string name="formulir">Formulir Prndaftaran</string>
 </resources>
