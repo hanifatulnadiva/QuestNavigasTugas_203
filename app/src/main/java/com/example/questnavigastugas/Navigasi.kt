@@ -12,7 +12,7 @@ enum class Navigasi {
     List
 }
 @Composable
-@fun HomeApp(
+fun HomeApp(
     navController: NavHostController= rememberNavController(),
     modifier: Modifier
 ){}
