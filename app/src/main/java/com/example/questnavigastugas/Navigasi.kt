@@ -35,15 +35,7 @@ fun HomeApp(
             {
                 welcome(
                     OnSubmitBtnClick={
-                        navController.navigate(route=Navigasi.Formulir.name)
-                    }
-                )
-            }
-            composable (route= Navigasi.Formulir.name)
-            {
-                FormulirPendaftaran(
-                    OnSubmitBtnClick={
-                        navController.navigate(route= Navigasi.List.name)
+                        navController.navigate(route=Navigasi.List.name)
                     }
                 )
             }
@@ -51,7 +43,16 @@ fun HomeApp(
             {
                 DaftarPeserta(
                     onBackToBerandaClick={cancelAndBackToBeranda(navController)},
-                    onBackToFormulirClick={cancelAndBackToFormulir(navController)}
+                    OnBtnToFormulirClick = {
+                        navController.navigate(route= Navigasi.Formulir.name)
+                    }
+                )
+            }
+            composable (route= Navigasi.Formulir.name)
+            {
+                FormulirPendaftaran(
+                    onBackToBtnClick={cancelAndBackToList(navController)}
+
                 )
             }
 
@@ -63,8 +64,8 @@ private fun cancelAndBackToBeranda(
 ){
     navController.popBackStack(route= Navigasi.Beranda.name, inclusive = false)
 }
-private fun cancelAndBackToFormulir(
+private fun cancelAndBackToList(
     navController: NavController
 ){
-    navController.popBackStack(route = Navigasi.Formulir.name, inclusive = false)
+    navController.popBackStack(route = Navigasi.List.name, inclusive = false)
 }

@@ -37,7 +37,7 @@ import com.example.questnavigastugas.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormulirPendaftaran(
-    OnSubmitBtnClick:()-> Unit
+    onBackToBtnClick:()-> Unit
 ){
 //    var textNama by remember { mutableStateOf(value="") }
 //    var textJK by remember { mutableStateOf(value="") }
@@ -143,7 +143,7 @@ fun FormulirPendaftaran(
                         colors = ButtonDefaults.buttonColors(
                             containerColor = colorResource(id=R.color.purple_500 )
                         ),
-                        onClick = OnSubmitBtnClick
+                        onClick = onBackToBtnClick
                     ){
                         Text(text=stringResource(id=R.string.submit))
                     }

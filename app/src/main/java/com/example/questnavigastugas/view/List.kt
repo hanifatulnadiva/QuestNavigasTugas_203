@@ -31,7 +31,7 @@ import com.example.questnavigastugas.R
 @Composable
 fun DaftarPeserta(
     onBackToBerandaClick:()-> Unit,
-    onBackToFormulirClick:()-> Unit
+    OnBtnToFormulirClick:()-> Unit
 ){
     val daftar=listOf(
         Pair(first = stringResource(id=R.string.nama_lengkap), second = "Azira"),
@@ -92,7 +92,7 @@ fun DaftarPeserta(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = colorResource(id=R.color.purple_500 )
                 ),
-                onClick = onBackToFormulirClick)
+                onClick = OnBtnToFormulirClick)
 
             {
                 Text(text = stringResource(R.string.formulir))
