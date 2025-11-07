@@ -45,6 +45,13 @@ fun HomeApp(
                     }
                 )
             }
+            composable (route=Navigasi.List.name)
+            {
+                DaftarPeserta(
+                    onBackToBerandaClick={cancelAndBackToBeranda(navController)},
+                    onBackToFormulirClick={cancelAndBackToFormulir(navController)}
+                )
+            }
 
         }
     }
