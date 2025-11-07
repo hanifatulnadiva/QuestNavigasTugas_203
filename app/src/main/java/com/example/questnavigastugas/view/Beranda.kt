@@ -1,5 +1,6 @@
 package com.example.questnavigastugas.view
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -13,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -26,6 +28,7 @@ fun welcome(
     OnSubmitBtnClick:()-> Unit
 ){
     Scaffold{ isiRuang->
+        val logo = painterResource(R.drawable.Logo)
         Column (
             modifier = Modifier
                 .padding(paddingValues = isiRuang),
@@ -39,6 +42,7 @@ fun welcome(
                 color = Color.White
             )
             Spacer(modifier = Modifier.height(height = 30.dp))
+
 
         }
     }
