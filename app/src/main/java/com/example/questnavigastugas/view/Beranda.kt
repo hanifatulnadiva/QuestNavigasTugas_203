@@ -1,11 +1,14 @@
 package com.example.questnavigastugas.view
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -29,7 +32,10 @@ import com.example.questnavigastugas.R
 fun welcome(
     OnSubmitBtnClick:()-> Unit
 ){
-    Scaffold{ isiRuang->
+    Scaffold(
+        modifier = Modifier
+            .background(colorResource(id = R.color.background))
+    ){ isiRuang->
         val logo = painterResource(R.drawable.Logo)
         Column (
             modifier = Modifier
@@ -61,6 +67,15 @@ fun welcome(
                 color=Color.Black
             )
             Spacer(modifier = Modifier.height(height = 30.dp))
+            Button(modifier= Modifier,
+                onClick = OnSubmitBtnClick,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = colorResource(id=R.color.purple_500)
+                )
+            ){
+              Text(text = stringResource(id=R.string.submit), modifier = Modifier,
+                  color=Color.White)
+            }
 
 
 
