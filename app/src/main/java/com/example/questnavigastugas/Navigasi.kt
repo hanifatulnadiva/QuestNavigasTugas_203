@@ -61,3 +61,8 @@ private fun cancelAndBackToBeranda(
 ){
     navController.popBackStack(route= Navigasi.Beranda.name)
 }
+private fun cancelAndBackToFormulir(
+    navController: NavController
+){
+    navController.popBackStack(route = Navigasi.Formulir.name)
+}
