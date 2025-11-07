@@ -72,6 +72,11 @@ fun DaftarPeserta(
                 {
                     Text(text="Beranda")
                 }
+                Button(modifier = Modifier,
+                    onClick = onBackToFormulirClick)
+                {
+                    Text(text = stringResource(R.string.formulir))
+                }
             }
 
         }
