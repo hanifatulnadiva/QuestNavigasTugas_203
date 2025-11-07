@@ -1,12 +1,15 @@
 package com.example.questnavigastugas.view
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -43,21 +46,26 @@ fun DaftarPeserta(
         )}
     ){ isiRuang->
         Column (modifier = Modifier
+            .fillMaxSize()
+            .background(colorResource(R.color.background))
             .padding(paddingValues = isiRuang),
-            verticalArrangement = Arrangement.SpaceBetween)
+            verticalArrangement = Arrangement.Top)
+
         {
+            daftar.forEach { item->
             Card (modifier = Modifier
-                .padding(all=25.dp)
+                .padding(all=12.dp)
                 .fillMaxWidth(),
                 elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
                 colors = CardDefaults.cardColors(
-                    containerColor = Color.White
-                ))
+                    containerColor = Color.White)
+            )
             {
-                daftar.forEach { item->
-                    Column {
+                    Column (modifier = Modifier
+                        .padding(all=15.dp)){
                         Text(text=item.first,
                         fontSize = 16.sp
+
                     )
                         Spacer(modifier = Modifier.height(6.dp))
                         Text(text=item.second,
@@ -66,17 +74,28 @@ fun DaftarPeserta(
                         )
                     }
                 }
-                Spacer(modifier = Modifier .height(height = 30.dp))
-                Button(modifier = Modifier,
-                    onClick = onBackToBerandaClick)
-                {
-                    Text(text="Beranda")
-                }
-                Button(modifier = Modifier,
-                    onClick = onBackToFormulirClick)
-                {
-                    Text(text = stringResource(R.string.formulir))
-                }
+            }
+            Spacer(modifier = Modifier .height(height = 30.dp))
+            Button(modifier = Modifier
+                .padding(10.dp)
+                .fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = colorResource(id=R.color.purple_500 )
+                ),
+                onClick = onBackToBerandaClick)
+            {
+                Text(text="Beranda")
+            }
+            Button(modifier = Modifier
+                .padding(10.dp)
+                .fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = colorResource(id=R.color.purple_500 )
+                ),
+                onClick = onBackToFormulirClick)
+
+            {
+                Text(text = stringResource(R.string.formulir))
             }
 
         }
