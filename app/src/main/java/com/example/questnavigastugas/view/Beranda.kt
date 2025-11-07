@@ -45,7 +45,9 @@ fun welcome(
             Spacer(modifier = Modifier.height(height = 30.dp))
             Image(painter=logo,
                 contentDescription = null,
-                contentScale = ContentScale.Fit)
+                contentScale = ContentScale.Fit
+            )
+            Spacer(modifier = Modifier.height(height = 30.dp))
 
         }
     }
