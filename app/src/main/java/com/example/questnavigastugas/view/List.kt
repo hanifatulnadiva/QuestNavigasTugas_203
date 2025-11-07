@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,7 +27,8 @@ import com.example.questnavigastugas.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DaftarPeserta(
-    OnSubmitBtnClick:()-> Unit
+    onBackToBerandaClick:()-> Unit,
+    onBackToFormulirClick:()-> Unit
 ){
     val daftar=listOf(
         Pair(first = stringResource(id=R.string.nama_lengkap), second = "Azira"),
@@ -53,7 +55,8 @@ fun DaftarPeserta(
                 ))
             {
                 daftar.forEach { item->
-                    Column { Text(text=item.first,
+                    Column {
+                        Text(text=item.first,
                         fontSize = 16.sp
                     )
                         Spacer(modifier = Modifier.height(6.dp))
@@ -63,7 +66,14 @@ fun DaftarPeserta(
                         )
                     }
                 }
+                Spacer(modifier = Modifier .height(height = 30.dp))
+                Button(modifier = Modifier,
+                    onClick = onBackToBerandaClick)
+                {
+                    Text(text="Beranda")
+                }
             }
+
         }
 
     }
