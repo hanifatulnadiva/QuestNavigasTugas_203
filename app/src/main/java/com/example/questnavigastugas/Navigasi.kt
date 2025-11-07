@@ -37,6 +37,14 @@ fun HomeApp(
                     }
                 )
             }
+            composable (route= Navigasi.Formulir.name)
+            {
+                FormulirPendaftaran(
+                    OnSubmitBtnClick={
+                        navController.navigate(route= Navigasi.List.name)
+                    }
+                )
+            }
 
         }
     }
