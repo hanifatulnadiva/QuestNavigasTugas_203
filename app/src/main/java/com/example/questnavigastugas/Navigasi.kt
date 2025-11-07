@@ -9,7 +9,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-
+import com.example.questnavigastugas.view.welcome
+import com.example.questnavigastugas.view.DaftarPeserta
+import com.example.questnavigastugas.view.FormulirPendaftaran
 enum class Navigasi {
     Beranda,
     Formulir,
@@ -59,10 +61,10 @@ fun HomeApp(
 private fun cancelAndBackToBeranda(
     navController: NavController
 ){
-    navController.popBackStack(route= Navigasi.Beranda.name)
+    navController.popBackStack(route= Navigasi.Beranda.name, inclusive = false)
 }
 private fun cancelAndBackToFormulir(
     navController: NavController
 ){
-    navController.popBackStack(route = Navigasi.Formulir.name)
+    navController.popBackStack(route = Navigasi.Formulir.name, inclusive = false)
 }
