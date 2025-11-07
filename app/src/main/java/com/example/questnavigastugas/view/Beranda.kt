@@ -55,6 +55,13 @@ fun welcome(
                 fontFamily = FontFamily.Monospace,
                 color = colorResource(id = R.color.btnBeranda)
             )
+            Text(text=stringResource(id=R.string.NIM), modifier = Modifier,
+                fontSize = 18.sp,
+                fontFamily = FontFamily.Serif,
+                color=Color.Black
+            )
+            Spacer(modifier = Modifier.height(height = 30.dp))
+
 
 
         }
