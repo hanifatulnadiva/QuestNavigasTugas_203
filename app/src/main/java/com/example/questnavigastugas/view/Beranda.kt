@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -32,13 +33,13 @@ import com.example.questnavigastugas.R
 fun welcome(
     OnSubmitBtnClick:()-> Unit
 ){
-    Scaffold(
-        modifier = Modifier
-            .background(colorResource(id = R.color.background))
-    ){ isiRuang->
-        val logo = painterResource(R.drawable.Logo)
+    Scaffold{ isiRuang->
+
+        val logo = painterResource(R.drawable.logo)
         Column (
             modifier = Modifier
+                .fillMaxSize()
+                .background(colorResource(id = R.color.background))
                 .padding(paddingValues = isiRuang),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
