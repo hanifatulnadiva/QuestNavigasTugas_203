@@ -8,12 +8,12 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -48,7 +48,7 @@ fun welcome(
                 fontWeight = FontWeight.Bold,
                 fontFamily = FontFamily.Serif,
                 fontSize = 40.sp,
-                color = Color.White
+                color = colorResource(id = R.color.btnBeranda)
             )
             Spacer(modifier = Modifier.height(height = 30.dp))
             Image(painter=logo,
@@ -68,7 +68,8 @@ fun welcome(
                 color=Color.Black
             )
             Spacer(modifier = Modifier.height(height = 30.dp))
-            Button(modifier= Modifier,
+            Button(modifier= Modifier
+                .width(width = 270.dp),
                 onClick = OnSubmitBtnClick,
                 colors = ButtonDefaults.buttonColors(
                     containerColor = colorResource(id=R.color.purple_500)
