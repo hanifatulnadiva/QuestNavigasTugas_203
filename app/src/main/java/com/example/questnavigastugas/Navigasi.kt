@@ -56,3 +56,8 @@ fun HomeApp(
         }
     }
 }
+private fun cancelAndBackToBeranda(
+    navController: NavController
+){
+    navController.popBackStack(route= Navigasi.Beranda.name)
+}
